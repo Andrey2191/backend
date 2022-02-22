@@ -9,6 +9,8 @@ import { PizzasService } from './pizzas/pizzas.service';
 import { PizzasModule } from './pizzas/pizzas.module';
 import { SaucesService } from './sauces/sauces.service';
 import { SaucesModule } from './sauces/sauces.module';
+import { OrdersService } from './orders/orders.service';
+import { OrdersModule } from './orders/orders.module';
 
 @Module({
   imports: [
@@ -18,6 +20,7 @@ import { SaucesModule } from './sauces/sauces.module';
     AuthModule,
     PizzasModule,
     SaucesModule,
+    OrdersModule,
   ],
   controllers: [AppController],
   providers: [AppService],

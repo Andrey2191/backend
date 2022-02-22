@@ -4,6 +4,7 @@ import { User, UserDocument } from './user.shema';
 import { Model } from 'mongoose';
 import { CreateUserDto } from './dto/create-user.dto';
 import { Role } from 'src/roles/role.enum';
+import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UserService {
@@ -11,7 +12,9 @@ export class UserService {
 
   async createUser(dto: CreateUserDto) {
     const user = await this.userModel.create(dto);
+    const salt = await bcrypt.genSalt();
     user.roles.push(Role.USER);
+    user.password = await bcrypt.hash(dto.password, salt);
     return user;
   }
 
@@ -20,11 +23,7 @@ export class UserService {
     return users;
   }
 
-  async getUserByEmail(email: string) {
-    const user = await this.userModel.findOne({
-      where: { email },
-      include: { all: true },
-    });
-    return user;
+  getUserByEmail(email: string) {
+    return this.userModel.findOne({ email }).select('+password');
   }
 }

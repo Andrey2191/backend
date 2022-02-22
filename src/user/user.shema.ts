@@ -8,7 +8,7 @@ export type UserDocument = User & Document;
 @Schema()
 export class User {
   @ApiProperty({ example: 'user@gmail.com', description: 'email' })
-  @Prop({ unique: true, select: false })
+  @Prop({ unique: true })
   email: string;
 
   @ApiProperty({ example: '123456qwerty', description: 'password' })

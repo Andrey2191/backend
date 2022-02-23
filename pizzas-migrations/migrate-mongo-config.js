@@ -3,7 +3,8 @@
 const config = {
   mongodb: {
     // TODO Change (or review) the url to your MongoDB:
-    url: process.env.DB_URL,
+
+    url: 'mongodb+srv://andrey:123@cluster0.3t64d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
 
     // TODO Change this to your database name:
     databaseName: 'myFirstDatabase',

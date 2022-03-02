@@ -10,7 +10,7 @@ export class PizzasService {
   ) {}
 
   async getAllPizzas() {
-    const pizzas = await this.pizzaModel.find().exec();
+    const pizzas = await this.pizzaModel.find().populate('Ingredients');
     return pizzas;
   }
 }

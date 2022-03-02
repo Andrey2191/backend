@@ -5,8 +5,7 @@ export type IngredientsDocument = Ingredients & Document;
 
 @Schema()
 export class Ingredients {
-  @Prop()
-  _id: MongooseSchema.Types.ObjectId;
+  _id: string;
   @Prop()
   name: string;
 

@@ -10,6 +10,7 @@ module.exports = {
         price: 5,
         category: 0,
         rating: 4,
+        ingredients: ['Томатный соус', 'пикантная пепперони', 'моцарелла'],
       },
       {
         imageUrl:
@@ -20,6 +21,7 @@ module.exports = {
         price: 7,
         category: 1,
         rating: 6,
+        ingredients: ['Моцарелла', 'сыры чеддер и пармезан', 'альфредо'],
       },
       {
         imageUrl:
@@ -30,6 +32,14 @@ module.exports = {
         price: 18,
         category: 1,
         rating: 4,
+        ingredients: [
+          'Соус барбекю',
+          'томатный соус',
+          'цыпленок',
+          'красный лук',
+          'моцарелла',
+          ' бекон',
+        ],
       },
       {
         imageUrl:
@@ -40,6 +50,14 @@ module.exports = {
         price: 18,
         category: 2,
         rating: 2,
+        ingredients: [
+          'Кисло сладкий соус',
+          'томатный соус',
+          'цыпленок',
+          'красный лук',
+          'моцарелла',
+          ' бекон',
+        ],
       },
       {
         imageUrl:
@@ -50,6 +68,14 @@ module.exports = {
         price: 16,
         category: 3,
         rating: 8,
+        ingredients: [
+          'Мясной соус болоньезе',
+          'моцарелла',
+          'соленые огурчики',
+          'красный лук',
+          'томаты',
+          ' соус бургер',
+        ],
       },
       {
         imageUrl:
@@ -60,6 +86,7 @@ module.exports = {
         price: 18,
         category: 2,
         rating: 2,
+        ingredients: ['Томатный соус', 'пикантная пепперони', 'моцарелла'],
       },
       {
         imageUrl:
@@ -70,6 +97,7 @@ module.exports = {
         price: 11,
         category: 1,
         rating: 9,
+        ingredients: ['Томатный соус', 'пикантная пепперони', 'моцарелла'],
       },
       {
         imageUrl:
@@ -80,6 +108,12 @@ module.exports = {
         price: 5,
         category: 4,
         rating: 10,
+        ingredients: [
+          'Томатный соус',
+          'Итальянские травы',
+          'томаты',
+          'моцарелла',
+        ],
       },
       {
         imageUrl:
@@ -90,6 +124,16 @@ module.exports = {
         price: 16,
         category: 5,
         rating: 10,
+        ingredients: [
+          'Томатный соус',
+          'Итальянские травы',
+          'томаты',
+          'моцарелла',
+          'пикантная пепперони',
+          'моцарелла',
+          ' ветчина',
+          ' шампиньоны',
+        ],
       },
       {
         imageUrl:
@@ -100,6 +144,15 @@ module.exports = {
         price: 11,
         category: 5,
         rating: 7,
+        ingredients: [
+          'Томатный соус',
+          'Итальянские травы',
+          'томаты',
+          'моцарелла',
+          ' маслины',
+          'моцарелла',
+          ' шампиньоны',
+        ],
       },
     ]);
   },

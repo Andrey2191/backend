@@ -5,12 +5,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
-import { PizzasService } from './pizzas/pizzas.service';
 import { PizzasModule } from './pizzas/pizzas.module';
-import { SaucesService } from './sauces/sauces.service';
 import { SaucesModule } from './sauces/sauces.module';
-import { OrdersService } from './orders/orders.service';
 import { OrdersModule } from './orders/orders.module';
+import { IngredientsModule } from './ingredients/ingredients.module';
 
 @Module({
   imports: [
@@ -21,6 +19,7 @@ import { OrdersModule } from './orders/orders.module';
     PizzasModule,
     SaucesModule,
     OrdersModule,
+    IngredientsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

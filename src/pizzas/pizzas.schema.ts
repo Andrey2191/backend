@@ -1,5 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document, Types, Schema as MongooseSchema } from 'mongoose';
+import * as mongoose from 'mongoose';
+import { Ingredients } from 'src/ingredients/ingredients.schema';
 
 export type PizzaDocument = Pizza & Document;
 
@@ -26,8 +28,10 @@ export class Pizza {
   @Prop()
   rating: number;
 
-  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'Ingredients' })
-  ingredients: MongooseSchema.Types.ObjectId;
+  @Prop({
+    type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Ingredients' }],
+  })
+  ingredients: Ingredients[];
 }
 
 export const PizzaSchema = SchemaFactory.createForClass(Pizza);

@@ -12,11 +12,7 @@ export class PizzasService {
   ) {}
 
   async getAllPizzas() {
-    const pizzas = await this.pizzaModel
-      .findOne({ _id: '6228aa60a876ba92ad24d29f' })
-      .populate('ingredients');
+    const pizzas = await this.pizzaModel.find().populate('ingredients');
     return pizzas;
   }
 }
-
-// поменять id для ингредиентов и пицц

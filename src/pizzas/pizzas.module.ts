@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PizzasController } from './pizzas.controller';
 import { Pizza, PizzaSchema } from './pizzas.schema';

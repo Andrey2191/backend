@@ -24,7 +24,7 @@ export class UserController {
   @ApiResponse({ status: 200, type: [User] })
   @UseGuards(JwtAuthGuard)
   @Get()
-  @Roles(Role.ADMIN)
+  // @Roles(Role.ADMIN)
   getAll() {
     return this.userService.getAllUsers();
   }

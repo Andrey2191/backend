@@ -92,4 +92,29 @@ export class AuthService {
       token: this.jwtService.sign(payload)
     }
   }
+
+  async registration(userDto: CreateUserDto) {
+        const candidate = await this.userService.getUserByEmail(userDto.email);
+        if (candidate) {
+          throw new HttpException(
+            'User with this email already exists',
+            HttpStatus.BAD_REQUEST,
+          );
+        }
+        const hashPassword = await bcrypt.hash(userDto.password, 5);
+        const user = await this.userService.createUser({
+          ...userDto,
+          password: hashPassword,
+        });
+        return this.generateToken(user);
+      }
+
+      async generateToken(user: User) {
+            const payload = { email: user.email, roles: user.roles };
+            console.log(payload);
+            return {
+              ...payload,
+              token: this.jwtService.sign(payload),
+            };
+          }
 }

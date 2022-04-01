@@ -24,6 +24,8 @@ export class UserService {
   }
 
   getUserByEmail(email: string) {
+    console.log(email);
+    
     return this.userModel.findOne({ email }).select('+password');
   }
 }
